@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+<meta charset="utf-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0, " >
+
+ <title>샘플</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+	<script>
+$(function(){
+	$("#back-top").hide();
+});
+
+$(function () {
+    $("#main").scroll(function () {
+        if ($("#main").scrollTop() > 1) {
+            $('#back-top').fadeIn();
+        } else {
+            $('#back-top').fadeOut();
+        }
+    });
+ 
+    // scroll body to 0px on click
+    $('#back-top a').click(function () {
+        $('#main').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+
+
+
+</script>
+ 
+ <style>
+ *{margin:0;padding:0;}
+ a{text-decoration:none; color:#fff;}
+ul li{list-style:none;}
+img{vertical-align:bottom;}
+
+body{background:url("bg/pen.jpg");background-size:cover; background-repeat:no-repeat;
+}
+
+/******************PC화면**************/
+#web{position:relative; margin:0 auto;}
+
+#web #webleft{position:absolute; width: 350px ;top:250px; left:350px; text-align:right;}
+#web #webleft .w1{font-size:20px; color:#bbb; font-weight:bold; padding-bottom:10px;}
+#web #webleft .w2{font-size:30px; color:#f1f1f1;  font-weight:bold; padding-bottom:50px;}
+#web #webleft .w3{font-size:13px; color:#333; font-weight:bold;}
+ 
+#web #webright{position:absolute;width:150px;top:400px; left:1200px;}
+#web #webright img {width:80px;}
+
+#web #webright .w1{float:right;padding-top:15px;font-size:13px;font-weight:bold; color:black;}
+ 
+#web #webbottom{position:absolute;width:400px; top:500px; left:1200px;}
+#web #webbottom p{background:#f3df8d; padding:10px; border-radius:20px;
+font-weight:bold;}
+
+#phone{position:absolute;top:120px;left:686px;width:550px;z-index:0;}
+
+/******************모바일 화면**************/
+
+
+#main {position:absolute;
+top:185px;
+left:795px;
+  width:331px;
+  margin:0 auto; 
+  overflow:auto;
+  height:582px;
+  
+}
+#main #top-banner{background:#333;}
+#main #top-banner p{text-align:center; color:#fff;}
+
+#main #slide {background:url("bg/b2.jpg");background-size:500px auto;background-repeat:no-repeat;
+width:100%;height:500px;}
+#main #slide #logo{text-align:center; padding-top:10%;}
+#main #slide #logo img{width:80%;}
+#main #slide #logo-text{text-align:center;
+font-weight:bold; color:#4c4c4c; padding-top:10%;font-size:30px;padding-bottom:10%;}
+#main #slide #logo-text:hover{color:#e79696;
+transition:1s;}
+
+
+#main #call{background:#fff; height:100px;	}
+#main #call-text{padding-left:10px;}
+#main #call-text .c1{font-size:15px; font-weight:bold; padding:10px 0 5px 0;}
+#main #call-text .c2{font-size:18px; font-weight:bold; color:skyblue;padding-bottom:5px;}
+#main #call-text .c3{font-size:11px; font-weight:bold; padding-bottom:5px;}
+#main #call-text .c4{position:absolute; top:230px; right:10px;}
+#main #call-text .c4 img{width:60px;}
+
+#main #menu{background:#e8e8e8; height:320px;}
+#main #menu #menu-text{text-align:right; padding-top:10px; padding-right:5px;}
+#main #menu #menu-text .m1{position:absolute; left:10px;}
+#main #menu #menu-text .m1 img {width:90px;}
+#main #menu #menu-text .m2{padding:5px 5px 5px 5px; font-size:15px; font-weight:bold}
+#main #menu #menu-text .m3{padding:5px 5px 5px 5px; font-size:18px; font-weight:bold; color:darkblue;}
+#main #menu #menu-text .m4{padding:5px 5px 5px 5px; font-size:11px; font-weight:bold; padding-bottom:5px;}
+
+#main #menu #menu-text2{padding-top:10px; width:100%;text-align:center; margin:0 auto;}
+#main #menu #menu-text2 li{background:#333; color:#fff;padding:2% 3%; text-align:center; margin:5px 5px; width:40%; float:left;}
+
+footer{background:#333; margin-top:90px; font-size:11px; padding:2%; color:#fff;}
+
+#main #pc{background:black; text-align:center; padding:3%;}
+#main #pc a{color:#fff; font-size:18px;}
+
+#name {text-align:center;padding:10px;}
+
+nav{width:220px;
+	position:absolute;
+	top:0;
+	left:-220px;
+	background-color:rgba(0,0,0,0.8);
+	transition:all 0.25s ease-out;
+	box-sizing:border-box;
+	text-align:center;
+	height:500px
+	z-index:999;}
+ label {
+	position:absolute;
+	top:5px;
+	right:2%;
+	width:50px;
+	height:50px;
+	text-indent:-9999em;
+	background:url(icon/hgw.png);
+	background-size:30px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+input{display:none;}
+
+input:checked + nav{
+	left:0;
+}
+
+#back-top {z-index:999;
+    position: fixed;
+	left:1020px;
+	top:600px;}
+#back-top img{width:50px;}
+/***************************마무리*********/
+
+/******************태블릿************************/
+
+@media all and (min-width:1025px){}
+
+@media all and (min-width:768px) and (max-width:1024px){
+body{background:none;}
+#pcview{display:none;}
+
+#main {height:auto;margin:0 auto;width:100%;position:reative;left:0;top:0;overflow:auto;} 
+#main #top-banner{background:#333; width:100%}
+#main #top-banner p{text-align:cen	ter; color:#fff;}
+
+#main #slide {background:url("bg/b2.jpg");background-size:1024px auto;background-repeat:no-repeat;
+width:100%;height:500px; background-position:top center; }
+#main #slide #logo{text-align:center; padding-top:10%;}
+#main #slide #logo-text{text-align:center; padding-top:10%;font-size:30px;padding-bottom:10%;}
+
+#main #call{background:#fff; height:100px;	width:100%;}
+#main #call-text{padding-left:10px;}
+#main #call-text .c1{font-size:15px; font-weight:bold; padding:10px 0 5px 0;}
+#main #call-text .c2{font-size:18px; font-weight:bold; color:skyblue;padding-bottom:5px;}
+#main #call-text .c3{font-size:11px; font-weight:bold; padding-bottom:5px;}
+#main #call-text .c4{position:absolute; right:0; top:41%;}
+
+#main #menu{background:#e8e8e8; height:80%;width:100%; }
+#main #menu #menu-text{text-align:right; padding-top:10px; padding-right:5px;}
+#main #menu #menu-text .m1{position:absolute; left:10px;}
+#main #menu #menu-text .m2{padding:5px 5px 5px 5px; font-size:15px; font-weight:bold}
+#main #menu #menu-text .m3{padding:5px 5px 5px 5px; font-size:18px; font-weight:bold; color:darkblue;}
+#main #menu #menu-text .m4{padding:5px 5px 5px 5px; font-size:11px; font-weight:bold; padding-bottom:5px;}
+
+
+#main #menu #menu-text2{padding-top:10px;width:100%;}
+#main #menu #menu-text2 li{background:#333;; text-align:center; margin:5px 5px; width:40%; float:left;}
+#main #menu #menu-text2 .m1{margin-left:30px;}
+footer{background:#333; width:100%;margin-top:50%; font-size:11px; padding:1% 2%; color:#fff;
+text-align:left; box-sizing:border-box;}
+
+#main #pc{width:100%;background:black; text-align:center; padding:3%;}
+#main #pc a{color:#fff; font-size:18px;}
+
+#name {text-align:center;padding:10px;}
+
+nav{width:50%;
+	position:absolute;
+	top:0;
+	left:-50%;
+	background-color:rgba(0,0,0,0.8);
+	transition:all 0.25s ease-out;
+	box-sizing:border-box;
+	text-align:center;
+	height:500px
+	z-index:999;}
+ label {
+	position:absolute;
+	top:5px;
+	right:2%;
+	width:50px;
+	height:50px;
+	text-indent:-9999em;
+	background:url(icon/hgw.png);
+	background-size:30px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+input{display:none;}
+
+input:checked + nav{
+	left:0;
+}
+
+#back-top {z-index:999;
+    position: fixed;
+	left:70%;
+	top:80%;}
+}
+
+/************************태블릿까지***************/
+
+/********************반응형 스마트폰 *********************/
+@media all and (max-width:767px){
+body{background:none;}
+#pcview{display:none;}
+
+#main {height:auto;margin:0 auto;width:100%;position:reative;left:0;top:0;overflow:auto;} 
+#main #top-banner{background:#333; width:100%}
+#main #top-banner p{text-align:cen	ter; color:#fff;}
+
+#main #slide {background:url("bg/b2.jpg");background-size:600px auto;background-repeat:no-repeat;
+width:100%; }
+#main #slide #logo{text-align:center; padding-top:10%;}
+#main #slide #logo-text{text-align:center; padding-top:10%;font-size:30px;padding-bottom:10%;}
+
+#main #call{background:#fff; height:100px;	width:100%;}
+#main #call-text{padding-left:10px;}
+#main #call-text .c1{font-size:15px; font-weight:bold; padding:10px 0 5px 0;}
+#main #call-text .c2{font-size:18px; font-weight:bold; color:skyblue;padding-bottom:5px;}
+#main #call-text .c3{font-size:11px; font-weight:bold; padding-bottom:5px;}
+#main #call-text .c4{position:absolute; right:0; top:32%;}
+
+#main #menu{background:#e8e8e8; height:70%;width:100%; }
+#main #menu #menu-text{text-align:right; padding-top:10px; padding-right:5px;}
+#main #menu #menu-text .m1{position:absolute; left:10px;}
+#main #menu #menu-text .m2{padding:5px 5px 5px 5px; font-size:15px; font-weight:bold}
+#main #menu #menu-text .m3{padding:5px 5px 5px 5px; font-size:18px; font-weight:bold; color:darkblue;}
+#main #menu #menu-text .m4{padding:5px 5px 5px 5px; font-size:11px; font-weight:bold; padding-bottom:5px;}
+
+
+#main #menu #menu-text2{padding-top:10px;width:100%;}
+#main #menu #menu-text2 li{background:#333;; text-align:center; margin:5px 5px; width:40%; float:left;}
+#main #menu #menu-text2 .m1{margin-left:10px;}
+footer{background:#333; width:100%;margin-top:35%; font-size:11px; padding:1% 2%; color:#fff;
+text-align:left; box-sizing:border-box;}
+
+#main #pc{width:100%;background:black; text-align:center; padding:3%;}
+#main #pc a{color:#fff; font-size:18px;}
+
+#name {text-align:center;padding:10px;}
+
+nav{width:50%;
+	position:absolute;
+	top:0;
+	left:-50%;
+	background-color:rgba(0,0,0,0.8);
+	transition:all 0.25s ease-out;
+	box-sizing:border-box;
+	text-align:center;
+	height:500px
+	z-index:999;}
+ label {
+	position:absolute;
+	top:5px;
+	right:2%;
+	width:50px;
+	height:50px;
+	text-indent:-9999em;
+	background:url(icon/hgw.png);
+	background-size:30px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+input{display:none;}
+
+input:checked + nav{
+	left:0;
+}
+
+#back-top {z-index:999;
+    position: fixed;
+	left:70%;
+	top:80%;}
+}
+
+ </style>
+ 
+ </head>
+ 
+ <body>
+<div id="wabpaper">
+<div id="web">
+<!--전체페이지-->
+	<div id="pcview">
+	<div id="webleft">
+		<p class="w1">MOBILE USER INTERFACE</p>
+		<p class="w2">오킴즈샘플</p>
+		<p class="w3">보고 계신 화면은 모바일홈페이지 미리보기 화면입니다.<br/>
+		일부 기능은 스마트폰에서만 작동합니다.<br/>
+		스마트폰을 이용해 접속하시길 권장합니다.</p>
+	</div>
+
+	<div id="webright">
+		<a href="#"><img id="computer" src="icon/computer2.png" alt="logo">
+		<p class="w1">PC버전<br/> 바로가기</p></a>
+	</div>
+	
+	<div id="webbottom">
+	<p>오킴즈 샘플<br>
+		대표.  홍길동<br>
+		주소.  서울 가나구 다나동 마바빌딩 123동456호<br>
+		TEL.  010-1234-5678<br>
+		사업자등록번호.  123-45-56789 <br>
+		COPYRIGHT(C) 오킴즈샘플. ALL RIGHTS RESERVED.</p>
+	</div>
+	
+<img id="phone" src="source/whitephone.PNG" alt="휴대폰">
+	</div>
+<!--전체페이지-->
+
+
+<!--모바일 페이지-->
+<div id="main">
+	
+		<p id="back-top">
+		<a href="#top"><img src="icon/aroow-top-gold.png" id="화살표위"></a>
+		</p>
+		
+		<div id="top-banner">
+			
+			<label for="asideMenu">button</label>
+			<input type="checkbox" id="asideMenu">
+			
+			<nav>
+			<ul>
+				<li><a href="#">Menu1</a>
+					<ul class="submenu">
+					<li><a href="">서브1</a></li>
+					<li><a href="">서브2</a></li>
+					<li><a href="">서브3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Menu2</a>
+					<ul class="submenu">
+					<li><a href="">서브1</a></li>
+					<li><a href="">서브2</a></li>
+					<li><a href="">서브3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Menu3</a>
+					<ul class="submenu">
+					<li><a href="">서브1</a></li>
+					<li><a href="">서브2</a></li>
+					<li><a href="">서브3</a></li>
+					</ul>
+				</li>
+			</ul>
+			</nav>
+			
+			
+			<p id="name">온라인지원센터</p>
+			
+		</div>
+		<div id="slide">
+			<p id="logo"><img src="img/okims.PNG" alt="logo"></p>
+			<p id="logo-text">온라인 지원 센터</p>
+			
+		<div id="call">
+				<div id="call-text">
+				<p class="c1">오킴즈</p>
+				<p class="c2">010.1234.5678</p>
+				<p class="c3">모바일에서 터치하시면 전화연결 됩니다</p>
+				<p class="c4"><img src="img/mbphone.PNG" alt="phone"></p>
+
+				</div>
+		</div>
+		
+		<div id="menu">
+			
+			<div id="menu-text">
+				<p class="m1"><img src="img/human.png" alt="people"></p>
+				<p class="m2">오킴즈</p>
+				<p class="m3">회사소개</p>
+				<p class="m4">최고의 온라인 지원센터</p>
+			</div>
+			
+			<ul id="menu-text2">
+				<li href="#" class="m1"><a href="eroom.html">포트폴리오</a></li>
+				<li href="#" class="m2"><a href="#">마바사아</a></li>
+				<li href="#" class="m1"><a href="#">아자차카</a></li>
+				<li href="#" class="m4"><a href="#">타파하라</a></li>
+				<li href="#" class="m1"><a href="#">가나다라</a></li>
+				<li href="#" class="m6"><a href="#">가나다라</a></li>
+				<li href="#" class="m1"><a href="#">가나다라</a></li>
+				<li href="#" class="m8"><a href="#">가나다라</a></li>
+			</ul>
+		
+			
+		
+		</div>
+		
+		</div>
+		
+		<footer>
+		<address>오킴즈샘플<br/>
+			대표 : 홍길동 | 서울 전지역
+		TEL : 010-1234-5678  <br /> 사업자등록번호 : 123-45-67890</address>
+		<p class="copyright">COPYRIGHT &copy; COPYRIGHT(C)<br/> 오킴즈샘플. ALL RIGHTS RESERVED.</p>
+		</footer>
+		
+		
+		<div id="pc">
+		<a href="#">PC버전</a>
+		</div>
+	</div>
+	<!--모바일 페이지-->
+
+
+
+
+
+</div>
+</div>
+ 
+ 
+ 
+ </body>
+ 
+ </html>
